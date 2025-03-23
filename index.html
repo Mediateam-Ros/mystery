@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Vormärz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Mystery Vormärz</h1>
+    <p class="description">Mache einen Doppelklick auf eine Karte, um mehr Informationen zu erhalten. Für die Übersichtlichkeit können die Kärtchen auch bewegt werden. Die Verbindungen bewegen sich dann mit.</p>
+
+<!-- Legende für Kategorien -->
+<div class="legende">
+    <h2>Legende</h2>
+    <div class="legende-container">
+        <div class="legende-item politik"><span></span> Politik & Revolution</div>
+        <div class="legende-item gesellschaft"><span></span> Gesellschaft & Soziales</div>
+        <div class="legende-item presse"><span></span> Presse & Meinungsfreiheit</div>
+        <div class="legende-item monarchie"><span></span> Monarchie & Herrschaft</div>
+        <div class="legende-item krieg"><span></span> Kriege & Konflikte</div>
+        <div class="legende-item ideen"><span></span> Nationale Symbole & Ideen</div>
+    </div>
+</div>
+
+    <div class="container">
+        <canvas id="connections"></canvas> <!-- Pfeile werden hier gezeichnet -->
+        <div id="karte-container"></div> <!-- Karten erscheinen hier -->
+    </div>
+
+    <!-- Popup für Fakten -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h3 id="popup-title"></h3>
+            <ul id="popup-text"></ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="jahr"></span> Mystery Vormärz | <a href="quellen.html" target="_blank">Quellen anzeigen</a>
+            | Erstellt durch <a href="mailto:kuehl.anthony@outlook.de">Anthony Kühl</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("jahr").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

@@ -13,12 +13,13 @@ body {
 }
 
 .description {
-    font-size: 20px;
+    font-size: 30px;
     width: 90%;
 }
 
 h1 {
     font-size: 2.5em;
+    margin-bottom: 0;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -67,58 +68,9 @@ canvas {
     transform: scale(0.95);
 }
 
-.popup {
-    display: none;
-    position: fixed;
-    color: black;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
-    background: rgba(255, 255, 255, 0.95);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    width: 80%;
-    max-width: 500px;
-    opacity: 0;
-    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-}
-
-.popup.show {
-    display: block;
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.popup-content {
-    text-align: center;
-    list-style: none;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    color: #333;
-    transition: color 0.3s;
-}
-
-.karte, .legende-item {
-    user-select: none;  
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none; 
-}
-
-.close:hover {
-    color: #e74c3c;
-}
-
 .popup img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 500px;
     border-radius: 8px;
     margin-top: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
@@ -147,6 +99,81 @@ canvas {
 .popup a.source-link:hover {
     background: #2980b9;
 }
+
+.popup {
+    display: none;
+    position: fixed;
+    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 80%;
+    max-width: 1000px;
+    max-height: 75%;
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.popup.show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-content ul {
+    text-align: left;
+    list-style: square;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.karte, .legende-item {
+    user-select: none;  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; 
+}
+
+.close:hover {
+    color: #e74c3c;
+}
+
+/* Neuer Stil für Jahreszahl */
+.year {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 1.2em;
+    background-color: #f4f4f4;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+
+/* Neuer Stil für Jahreszahlen */
+.year {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 1.2em;
+    background-color: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
 
 
 /* Animation für Pfeile */

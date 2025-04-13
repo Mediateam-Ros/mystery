@@ -50,7 +50,7 @@ if (!istPC()) {
         }
     }
 
-    // passwortAbfrage();
+    passwortAbfrage();
 }
 
 

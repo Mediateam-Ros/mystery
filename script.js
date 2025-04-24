@@ -1,4 +1,4 @@
-const korrektesPasswort = "Anthony";
+const korrektesPasswort = "xfbvfd.j-mkacksfohn8dsd5öxaüsdoapfiv5ngjk";
 
 function istPC() {
     return !/Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);

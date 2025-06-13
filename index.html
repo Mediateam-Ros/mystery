@@ -3,19 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Seite nicht gefunden</title>
+  <title>Seite nicht gefunden – Mystery Projekt</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #0d0d0d;
       color: #f2f2f2;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
       text-align: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    header h2 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #ffffff;
     }
 
     h1 {
@@ -27,7 +45,7 @@
     p {
       font-size: 1.3rem;
       margin-bottom: 2rem;
-      max-width: 500px;
+      max-width: 600px;
     }
 
     a {
@@ -44,11 +62,31 @@
     a:hover {
       background: #e60000;
     }
+
+    footer {
+      position: absolute;
+      bottom: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
   </style>
 </head>
 <body>
-  <h1>404</h1>
-  <p>Diese Seite ist nicht mehr aktiv, da sie zu lange nicht genutzt wurde.</p>
-  <a href="https://anthony-kuehl.de">Zurück zur Homepage</a>
+
+  <header>
+    <img src="https://anthony-kuehl.de/assets/img/logo.png" alt="Logo">
+    <h2>Mystery Projekt</h2>
+  </header>
+
+  <main>
+    <h1>404</h1>
+    <p>Diese Seite ist nicht mehr aktiv, weil sie zu lange nicht genutzt wurde.</p>
+    <a href="https://anthony-kuehl.de">Zurück zur Homepage</a>
+  </main>
+
+  <footer>
+    &copy; 2025 Mystery Projekt – Alle Rechte vorbehalten.
+  </footer>
+
 </body>
 </html>

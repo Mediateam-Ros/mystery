@@ -3,89 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Seite nicht gefunden – Mystery Projekt</title>
+  <title>Seite nicht verfügbar – Mystery Projekt</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0d0d0d;
-      color: #f2f2f2;
+      background: #f0f0f0;
+      color: #333;
+      height: 100vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
+    }
+
+    .modal {
+      background: white;
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
       text-align: center;
-      min-height: 100vh;
-      padding: 2rem;
+      max-width: 500px;
+      width: 90%;
+      animation: fadeIn 0.5s ease-in-out;
     }
 
-    header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 3rem;
+    .modal img {
+      height: 60px;
+      margin-bottom: 1rem;
     }
 
-    header img {
-      height: 50px;
+    .modal h1 {
+      font-size: 2.5rem;
+      color: #cc0000;
+      margin-bottom: 1rem;
     }
 
-    header h2 {
-      margin: 0;
-      font-size: 1.8rem;
-      color: #ffffff;
+    .modal p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
     }
 
-    h1 {
-      font-size: 5rem;
-      margin-bottom: 0.5rem;
-      color: #ff4d4d;
+    .modal .small {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 1rem;
     }
 
-    p {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-      max-width: 600px;
-    }
-
-    a {
-      padding: 0.8rem 1.5rem;
-      background: #ff4d4d;
+    a.button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #cc0000;
       color: white;
-      border: none;
-      border-radius: 5px;
       text-decoration: none;
+      border-radius: 8px;
       font-weight: bold;
-      transition: background 0.3s ease;
+      transition: background-color 0.3s;
     }
 
-    a:hover {
-      background: #e60000;
+    a.button:hover {
+      background-color: #990000;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     footer {
       position: absolute;
       bottom: 1rem;
-      font-size: 0.9rem;
-      color: #888;
+      font-size: 0.85rem;
+      color: #999;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="https://anthony-kuehl.de/assets/img/logo.png" alt="Logo">
-    <h2>Mystery Projekt</h2>
-  </header>
-
-  <main>
-    <h1>404</h1>
-    <p>Diese Seite ist nicht mehr aktiv, weil sie zu lange nicht genutzt wurde.</p>
-    <a href="https://anthony-kuehl.de">Zurück zur Homepage</a>
-  </main>
+  <div class="modal">
+    <img src="https://anthony-kuehl.de/assets/img/logo.png" alt="Mystery Projekt Logo">
+    <h1>Seite nicht verfügbar</h1>
+    <p>Diese Seite des <strong>Mystery Projekts</strong> wurde zu lange nicht genutzt<br>und ist deshalb derzeit deaktiviert.</p>
+    <p class="small">Wenn du möchtest, dass diese Seite wieder freigeschaltet wird,<br>
+      melde dich bitte bei <strong>Anthony Kühl</strong>.</p>
+    <a href="https://anthony-kuehl.de" class="button">Zurück zur Homepage</a>
+  </div>
 
   <footer>
-    &copy; 2025 Mystery Projekt – Alle Rechte vorbehalten.
+    &copy; 2025 Anthony Kühl – Mystery Projekt
   </footer>
 
 </body>

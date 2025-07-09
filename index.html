@@ -1,97 +1,216 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Seite nicht verfügbar – Mystery Projekt</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vom Flickenteppich zur Reichsgründung – Geschichtsprojekt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    body {
+    :root {
+      --primary: #003366; /* Dunkles Blau */
+      --accent: #ffc107;  /* Gelb/Gold */
+      --background: #ffffff;
+      --text: #111111;
+      --muted: #444;
+      --footer-bg: #f0f0f0;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f0f0;
-      color: #333;
-      height: 100vh;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 1.5em 2em;
       display: flex;
       align-items: center;
-      justify-content: center;
-      overflow: hidden;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
-    .modal {
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75em;
+    }
+
+    .logo img {
+      height: 40px;
+      border-radius: 50%;
       background: white;
-      border-radius: 16px;
-      padding: 2.5rem;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo span {
+      font-size: 1.4em;
+      font-weight: 600;
+    }
+
+    main {
+      flex: 1;
+      padding: 2em;
       text-align: center;
-      max-width: 500px;
-      width: 90%;
-      animation: fadeIn 0.5s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .modal img {
-      height: 60px;
-      margin-bottom: 1rem;
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 0.4em;
+      color: var(--primary);
     }
 
-    .modal h1 {
-      font-size: 2.5rem;
-      color: #cc0000;
-      margin-bottom: 1rem;
+    .subtitle {
+      font-size: 1.1em;
+      max-width: 800px;
+      color: var(--muted);
+      margin-bottom: 2em;
     }
 
-    .modal p {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-
-    .modal .small {
-      font-size: 0.9rem;
-      color: #666;
-      margin-top: 1rem;
-    }
-
-    a.button {
+    .facts-link {
       display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #cc0000;
-      color: white;
+      margin-top: 0.5em;
+      font-weight: 600;
+      color: var(--accent);
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s;
     }
 
-    a.button:hover {
-      background-color: #990000;
+    .facts-link:hover {
+      text-decoration: underline;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .iframe-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      height: 0;
+      padding-top: 65%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      margin-bottom: 3em;
+    }
+
+    .iframe-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
     }
 
     footer {
-      position: absolute;
-      bottom: 1rem;
-      font-size: 0.85rem;
-      color: #999;
+      background-color: var(--footer-bg);
+      padding: 2em 1em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2em;
+      font-size: 0.95em;
+      border-top: 4px solid var(--primary);
+    }
+
+    .footer-column {
+      min-width: 180px;
+    }
+
+    .footer-column h3 {
+      font-size: 1.05em;
+      margin-bottom: 0.5em;
+      color: var(--primary);
+    }
+
+    .footer-column a {
+      display: block;
+      color: var(--text);
+      text-decoration: none;
+      margin: 0.3em 0;
+    }
+
+    .footer-column a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      .iframe-wrapper {
+        padding-top: 100%;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .footer-column {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="modal">
-    <img src="https://anthony-kuehl.de/assets/img/logo.png" alt="Mystery Projekt Logo">
-    <h1>Seite nicht verfügbar</h1>
-    <p>Diese Seite des <strong>Mystery Projekts</strong> wurde zu lange nicht genutzt<br>und ist deshalb derzeit deaktiviert.</p>
-    <p class="small">Wenn du möchtest, dass diese Seite wieder freigeschaltet wird,<br>
-      melde dich bitte bei <strong>Anthony Kühl</strong>.</p>
-    <a href="https://anthony-kuehl.de" class="button">Zurück zur Homepage</a>
-  </div>
+  <header>
+    <div class="logo">
+      <img src="https://anthony-kuehl.de/assets/img/logo.png" alt="Logo" />
+      <span>Anthony Kühl</span>
+    </div>
+  </header>
+
+  <main>
+    <h1>Vom Flickenteppich zur Reichsgründung</h1>
+    <p class="subtitle">
+      Ein multimediales Geschichtsprojekt zum 19. Jahrhundert: Vom Deutschen Bund über die Revolution 1848 bis zur Reichsgründung 1871.
+      <br>
+      <a class="facts-link" href="https://www.bpb.de/kurz-knapp/lexika/lexikon-der-politischen-begriffe/193204/vormaerz/" target="_blank">➤ Weitere Fakten bei der bpb</a>
+      <br>
+      <a class="facts-link" href="/fakten.html" target="_blank">➤ Weitere Fakten und Jahreszahlen</a>
+    </p>
+
+    <div class="iframe-wrapper">
+      <iframe loading="lazy"
+        src="https://www.canva.com/design/DAGsj36VtY0/iE2iPl_LDWi3z802bMM1Zg/view?embed">
+      </iframe>
+    </div>
+  </main>
 
   <footer>
-    &copy; 2025 Anthony Kühl – Mystery Projekt
+    <div class="footer-column">
+      <h3>Kontakt</h3>
+      <a href="mailto:support@anthony-kuehl.de">support@anthony-kuehl.de</a>
+    </div>
+    <div class="footer-column">
+      <h3>Website</h3>
+      <a href="https://www.anthony-kuehl.de" target="_blank">www.anthony-kuehl.de</a>
+    </div>
+    <div class="footer-column">
+      <h3>Sonstiges</h3>
+      <a href="https://www.anthony-kuehl.de/impressum.html">Impressum</a>
+      <a href="https://www.anthony-kuehl.de/datenschutz.html">Datenschutz</a>
+    </div>
   </footer>
 
 </body>

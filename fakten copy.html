@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fakten zur deutschen Geschichte (Vormärz bis Reichsgründung)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --primary: #003366;
+            /* Dunkles Blau */
+            --accent: #ffc107;
+            /* Gelb/Gold */
+            --background: #ffffff;
+            --text: #111111;
+            --muted: #444;
+            --footer-bg: #f0f0f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 1.5em 2em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        main {
+            margin: 2em;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75em;
+        }
+
+        .logo img {
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .logo span {
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1em;
+            color: #003366;
+        }
+
+        section {
+            background: #fff;
+            padding: 1em 1.5em;
+            margin-bottom: 1.5em;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            margin-top: 0;
+            color: #003366;
+        }
+
+        section ul {
+            margin: 0.5em 0;
+            padding-left: 1.2em;
+        }
+
+        footer {
+            background-color: var(--footer-bg);
+            padding: 2em 1em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2em;
+            font-size: 0.95em;
+            border-top: 4px solid var(--primary);
+        }
+
+        .footer-column {
+            min-width: 180px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.05em;
+            margin-bottom: 0.5em;
+            color: var(--primary);
+        }
+
+        .footer-column a, a {
+            display: block;
+            color: var(--text);
+            text-decoration: none;
+            margin: 0.3em 0;
+        }
+
+        .footer-column a:hover, a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        strong {
+            color: #003366;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .iframe-wrapper {
+                padding-top: 100%;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            .footer-column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://anthony-kuehl.de/assets/img/logo.png" alt="Logo" />
+            <span>Anthony Kühl</span>
+        </div>
+    </header>
+
+    <!-- Ich zeige dir hier nur den <main>-Teil mit den neuen Abschnitten + schöneren Jahreszahlen -->
+    <main>
+        <h1>Historische Begriffe im Überblick</h1>
+
+        <section id="deutscher-bund">
+            <h2>Deutscher Bund</h2>
+            <ul>
+                <li>Gegründet <strong>1815</strong> auf dem Wiener Kongress nach den Napoleonischen Kriegen</li>
+                <li>Union loser Staaten – kein Nationalstaat</li>
+                <li>Zentrales Beschlussorgan: der Bundestag mit Sitz in Frankfurt am Main</li>
+            </ul>
+        </section>
+
+        <section id="vormaerz">
+            <h2>Vormärz</h2>
+            <ul>
+                <li>Epoche zwischen <strong>1815</strong> (Wiener Kongress) und <strong>1848</strong> (Märzrevolution)
+                </li>
+                <li>Gekennzeichnet durch politische Restauration und wachsenden Protest</li>
+                <li>Wichtige Ereignisse: Hambacher Fest <strong>1832</strong>, Göttinger Sieben <strong>1837</strong>
+                </li>
+            </ul>
+        </section>
+
+        <section id="hambacher-fest">
+            <h2>Hambacher Fest</h2>
+            <ul>
+                <li><strong>1832</strong>: Großes politisches Fest mit ca. 30.000 Teilnehmern</li>
+                <li>Forderung nach Einheit, Freiheit und Demokratie</li>
+                <li>Symbol der frühen demokratischen Bewegung in Deutschland</li>
+            </ul>
+        </section>
+
+        <section id="buergerliche-nationalbewegung">
+            <h2>Bürgerliche Nationalbewegung</h2>
+            <ul>
+                <li>Getragen vom Bildungsbürgertum</li>
+                <li>Ziel: einheitlicher, demokratischer Nationalstaat</li>
+                <li>Stärkte sich im Zuge der Märzrevolution <strong>1848</strong></li>
+            </ul>
+        </section>
+
+        <section id="maerzrevolution">
+            <h2>Märzrevolution</h2>
+            <ul>
+                <li>Erster Höhepunkt: März <strong>1848</strong> in Berlin, Düsseldorf, Wien</li>
+                <li>Forderungen: Presse‑ und Versammlungsfreiheit, nationale Einheit, Verfassung</li>
+                <li>Folge: Einberufung der Frankfurter Nationalversammlung im Mai <strong>1848</strong></li>
+            </ul>
+        </section>
+
+        <section id="barrikadenkaempfe">
+            <h2>Barrikadenkämpfe</h2>
+            <ul>
+                <li>Schlüsselereignis der Märzrevolution <strong>1848</strong> in Städten wie Berlin und Wien</li>
+                <li>Symbole des Volkswiderstands gegen Monarchie und Polizei</li>
+                <li>Saalschlacht in Wien im Oktober <strong>1848</strong> war besonders blutig</li>
+            </ul>
+        </section>
+
+        <section id="nationalversammlung">
+            <h2>Frankfurter Nationalversammlung</h2>
+            <ul>
+                <li>Einberufen im Mai <strong>1848</strong> in der Paulskirche</li>
+                <li>Erste gesamtdeutsche Volksvertretung mit über 800 Abgeordneten</li>
+                <li>Verabschiedete im März <strong>1849</strong> die Paulskirchenverfassung</li>
+            </ul>
+        </section>
+
+        <section id="paulskirchenverfassung">
+            <h2>Paulskirchenverfassung</h2>
+            <ul>
+                <li>Entwurf einer konstitutionellen Monarchie mit Grundrechten</li>
+                <li>Legte erstmals Bürgerrechte für alle Deutschen fest</li>
+                <li>Von Preußen abgelehnt – scheiterte im Frühjahr <strong>1849</strong></li>
+            </ul>
+        </section>
+
+        <section id="reaktionszeit">
+            <h2>Reaktionszeit</h2>
+            <ul>
+                <li>Phase nach dem Scheitern der Revolution <strong>1849</strong> bis etwa <strong>1859</strong></li>
+                <li>Rückkehr zur Fürstenherrschaft, Einschränkung der Pressefreiheit</li>
+                <li>Überwachung politischer Opposition durch Geheimpolizei</li>
+            </ul>
+        </section>
+
+        <section id="kleindeutsche-loesung">
+            <h2>Kleindeutsche Lösung</h2>
+            <ul>
+                <li>Staatsidee eines Deutschen Reichs ohne Österreich</li>
+                <li>Wurde in Frankfurt <strong>1849</strong> favorisiert – und <strong>1871</strong> umgesetzt</li>
+                <li>Alternative: großdeutsche Lösung mit Österreich</li>
+            </ul>
+        </section>
+
+        <section id="bismarck">
+            <h2>Otto von Bismarck</h2>
+            <ul>
+                <li>Preußischer Ministerpräsident ab <strong>1862</strong>, später erster Reichskanzler</li>
+                <li>Verfolgte Einigungspolitik mit „Eisen und Blut“</li>
+                <li>Führte drei Einigungskriege: gegen Dänemark <strong>1864</strong>, Österreich <strong>1866</strong>,
+                    Frankreich <strong>1870/71</strong></li>
+            </ul>
+        </section>
+
+        <section id="einheitskriege">
+            <h2>Einigungskriege</h2>
+            <ul>
+                <li><strong>1864</strong>: Deutsch-Dänischer Krieg – Schleswig und Holstein an Preußen und Österreich
+                </li>
+                <li><strong>1866</strong>: Deutscher Krieg – Preußen besiegt Österreich, Norddeutscher Bund entsteht
+                </li>
+                <li><strong>1870/71</strong>: Deutsch-Französischer Krieg – Sieg führt zur Reichsgründung</li>
+            </ul>
+        </section>
+
+        <section id="reichsgruendung">
+            <h2>Deutsche Reichsgründung</h2>
+            <ul>
+                <li>Proklamation des Deutschen Kaisers am <strong>18. Januar 1871</strong> in Versailles</li>
+                <li>Preußen dominiert das neue Reich, Österreich bleibt außen vor</li>
+                <li>Beginn des Deutschen Kaiserreichs mit Bismarck als Kanzler</li>
+            </ul>
+        </section>
+
+        <section id="versailles">
+            <h2>Versailles</h2>
+            <ul>
+                <li>Ort der Kaiserproklamation <strong>1871</strong> im Spiegelsaal des Schlosses von Versailles</li>
+                <li>Symbolischer Akt nach deutschem Sieg im Deutsch-Französischen Krieg</li>
+                <li>Demütigung Frankreichs durch bewusste Ortswahl</li>
+            </ul>
+        </section>
+
+        <section>
+            <p>Alle Fakten basieren auf Primär- und Sekundärquellen. Weitere Quellen findest du in:</p>
+            <p><a href="quellen.html">quellen.html – Literatur und Weblinks</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-column">
+            <h3>Kontakt</h3>
+            <a href="mailto:support@anthony-kuehl.de">support@anthony-kuehl.de</a>
+        </div>
+        <div class="footer-column">
+            <h3>Website</h3>
+            <a href="https://www.anthony-kuehl.de" target="_blank">www.anthony-kuehl.de</a>
+        </div>
+        <div class="footer-column">
+            <h3>Sonstiges</h3>
+            <a href="https://www.anthony-kuehl.de/impressum.html">Impressum</a>
+            <a href="https://www.anthony-kuehl.de/datenschutz.html">Datenschutz</a>
+        </div>
+    </footer>
+</body>
+
+</html>

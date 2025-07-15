@@ -109,14 +109,16 @@
             color: var(--primary);
         }
 
-        .footer-column a, a {
+        .footer-column a,
+        a {
             display: block;
             color: var(--text);
             text-decoration: none;
             margin: 0.3em 0;
         }
 
-        .footer-column a:hover, a:hover {
+        .footer-column a:hover,
+        a:hover {
             color: var(--primary);
             text-decoration: underline;
         }
@@ -126,48 +128,47 @@
         }
 
         .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5em;
-    margin: 2em 0;
-}
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5em;
+            margin: 2em 0;
+        }
 
-.history-card {
-    background: #f9f9f9;
-    border-left: 6px solid var(--primary);
-    padding: 1.2em 1.5em;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease;
-}
+        .history-card {
+            background: #f9f9f9;
+            border-left: 6px solid var(--primary);
+            padding: 1.2em 1.5em;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease;
+        }
 
-.history-card:hover {
-    transform: translateY(-4px);
-}
+        .history-card:hover {
+            transform: translateY(-4px);
+        }
 
-.history-card h2 {
-    font-size: 1.25em;
-    color: var(--primary);
-    margin-bottom: 0.4em;
-}
+        .history-card h2 {
+            font-size: 1.25em;
+            color: var(--primary);
+            margin-bottom: 0.4em;
+        }
 
-.history-card .year {
-    background-color: var(--accent);
-    color: #111;
-    font-weight: 600;
-    padding: 0.3em 0.8em;
-    border-radius: 4px;
-    display: inline-block;
-    margin-bottom: 0.6em;
-    font-size: 0.95em;
-}
+        .history-card .year {
+            background-color: var(--accent);
+            color: #111;
+            font-weight: 600;
+            padding: 0.3em 0.8em;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 0.6em;
+            font-size: 0.95em;
+        }
 
-.history-card ul {
-    list-style: disc;
-    padding-left: 1.2em;
-    color: var(--muted);
-}
-
+        .history-card ul {
+            list-style: disc;
+            padding-left: 1.2em;
+            color: var(--muted);
+        }
 
         @media (max-width: 700px) {
             header {
@@ -204,46 +205,283 @@
         </div>
     </header>
 
-    <!-- Ich zeige dir hier nur den <main>-Teil mit den neuen Abschnitten + schöneren Jahreszahlen -->
     <main>
-    <h1>Fakten zur deutschen Geschichte (1815–1871)</h1>
+        <h1>Fakten zur deutschen Geschichte (1815–1871)</h1>
 
-    <div class="card-grid">
-        <div class="history-card">
-            <h2>Deutscher Bund</h2>
-            <div class="year">1815</div>
-            <ul>
-                <li>Gegründet auf dem Wiener Kongress</li>
-                <li>Loser Staatenbund ohne zentrale Regierung</li>
-                <li>Sitz des Bundestags in Frankfurt am Main</li>
-            </ul>
+        <div class="card-grid">
+
+            <div class="history-card">
+                <h2>Deutscher Bund</h2>
+                <div class="year">1815</div>
+                <ul>
+                    <li>Entstanden beim Wiener Kongress</li>
+                    <li>Lockerer Staatenbund ohne zentrale Regierung</li>
+                    <li>Sitz des Bundestags in Frankfurt am Main</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Wiener Kongress</h2>
+                <div class="year">1814–1815</div>
+                <ul>
+                    <li>Neuordnung Europas nach Napoleon</li>
+                    <li>Restauration monarchischer Strukturen</li>
+                    <li>Grundlage für Legitimität der Herrscher</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Waterloo</h2>
+                <div class="year">1815</div>
+                <ul>
+                    <li>Letzte Niederlage Napoleons</li>
+                    <li>Beendete seine Herrschaft endgültig</li>
+                    <li>Ermöglichte Neuordnung Europas</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Wartburgfest</h2>
+                <div class="year">1817</div>
+                <ul>
+                    <li>Versammlung liberaler Studenten</li>
+                    <li>Forderung nach Einheit und Freiheit</li>
+                    <li>Symbolische Bücherverbrennung</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Ermordung Kotzebues</h2>
+                <div class="year">1819</div>
+                <ul>
+                    <li>Von einem Burschenschafter erstochen</li>
+                    <li>Vorwand für Repression gegen Liberale</li>
+                    <li>Auslöser der Karlsbader Beschlüsse</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Karlbader Beschlüsse</h2>
+                <div class="year">1819</div>
+                <ul>
+                    <li>Zensur von Presse & Universitäten</li>
+                    <li>Verbot von Burschenschaften</li>
+                    <li>Stärkung monarchischer Kontrolle</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Julirevolution (Frankreich)</h2>
+                <div class="year">1830</div>
+                <ul>
+                    <li>Sturz von Karl X. in Frankreich</li>
+                    <li>Inspirierte deutsche Liberale</li>
+                    <li>Beginn erneuter Protestbewegungen</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Hambacher Fest</h2>
+                <div class="year">1832</div>
+                <ul>
+                    <li>30.000 Teilnehmer aus allen Schichten</li>
+                    <li>Forderung nach Einheit & Bürgerrechten</li>
+                    <li>Verwendung der Farben Schwarz-Rot-Gold</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Pauperismus</h2>
+                <div class="year">1830er</div>
+                <ul>
+                    <li>Massive Verarmung trotz Arbeit</li>
+                    <li>Begleiterscheinung der Frühindustrialisierung</li>
+                    <li>Teil der Sozialen Frage</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Weberaufstand</h2>
+                <div class="year">1844</div>
+                <ul>
+                    <li>Aufstand der schlesischen Weber</li>
+                    <li>Reaktion auf Armut & Ausbeutung</li>
+                    <li>Gewaltsam niedergeschlagen</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Märzrevolution</h2>
+                <div class="year">1848</div>
+                <ul>
+                    <li>Revolutionäre Unruhen im März</li>
+                    <li>Forderungen nach Verfassung & Einheit</li>
+                    <li>Einsetzung liberaler Regierungen</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Frankfurter Nationalversammlung</h2>
+                <div class="year">1848</div>
+                <ul>
+                    <li>Versammlung in der Paulskirche</li>
+                    <li>Diskussion über Reichsverfassung</li>
+                    <li>Erstes gesamtdeutsches Parlament</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Paulskirchenverfassung</h2>
+                <div class="year">1849</div>
+                <ul>
+                    <li>Geplante konstitutionelle Monarchie</li>
+                    <li>Kaiserkrone an Friedrich Wilhelm IV.</li>
+                    <li>Verfassung nie umgesetzt</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Rumpfparlament</h2>
+                <div class="year">1849</div>
+                <ul>
+                    <li>Letzter Versuch der Revolutionäre</li>
+                    <li>In Stuttgart fortgesetzt</li>
+                    <li>Gewaltsam aufgelöst</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Soziale Frage</h2>
+                <div class="year">1840er</div>
+                <ul>
+                    <li>Folge der Industrialisierung</li>
+                    <li>Unmenschliche Arbeitsbedingungen</li>
+                    <li>Forderungen nach Sozialreformen</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Frei gewähltes Parlament</h2>
+                <div class="year">1848</div>
+                <ul>
+                    <li>Erste gesamtdeutsche Volksvertretung</li>
+                    <li>Einberufung durch Volksdruck</li>
+                    <li>Sitz in Frankfurt</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Schwarz-Rot-Gold</h2>
+                <div class="year">seit 1832</div>
+                <ul>
+                    <li>Symbol der Einheit und Freiheit</li>
+                    <li>Verwendung u. a. beim Hambacher Fest</li>
+                    <li>Heute deutsche Nationalfarben</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Legitimität</h2>
+                <div class="year">ab 1815</div>
+                <ul>
+                    <li>Herrschaft durch „Gottesgnadentum“</li>
+                    <li>Zentraler Begriff der Restauration</li>
+                    <li>Im Gegensatz zur Volkssouveränität</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Gleichberechtigung aller Bürger</h2>
+                <div class="year">Forderung 1848</div>
+                <ul>
+                    <li>Keine Privilegien für Adel & Klerus</li>
+                    <li>Gleiche Rechte und Pflichten</li>
+                    <li>Teil der Märzforderungen</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Trennung von Kirche und Staat</h2>
+                <div class="year">1848</div>
+                <ul>
+                    <li>Forderung liberaler Gruppen</li>
+                    <li>Einfluss der Kirche sollte begrenzt werden</li>
+                    <li>Teil moderner Verfassungsmodelle</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Bismarck</h2>
+                <div class="year">ab 1862</div>
+                <ul>
+                    <li>Preußischer Ministerpräsident</li>
+                    <li>Architekt der Reichsgründung</li>
+                    <li>Realpolitiker: „Blut und Eisen“</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Deutscher Krieg</h2>
+                <div class="year">1866</div>
+                <ul>
+                    <li>Preußen vs. Österreich</li>
+                    <li>Preußen siegt bei Königgrätz</li>
+                    <li>Ende des Deutschen Bundes</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Norddeutscher Bund</h2>
+                <div class="year">1867</div>
+                <ul>
+                    <li>Vereinigung norddeutscher Staaten</li>
+                    <li>Unter preußischer Führung</li>
+                    <li>Vorstufe zum Kaiserreich</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Emser Depesche</h2>
+                <div class="year">1870</div>
+                <ul>
+                    <li>Provozierter Konflikt mit Frankreich</li>
+                    <li>Fälschung durch Bismarck</li>
+                    <li>Auslöser des Deutsch-Französischen Krieges</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Deutsch-Französischer Krieg</h2>
+                <div class="year">1870–1871</div>
+                <ul>
+                    <li>Krieg zwischen Frankreich und Preußen</li>
+                    <li>Preußischer Sieg</li>
+                    <li>Legitimation zur Reichsgründung</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Versailles</h2>
+                <div class="year">1871</div>
+                <ul>
+                    <li>Ort der Reichsgründung</li>
+                    <li>Symbolischer Akt im Spiegelsaal</li>
+                    <li>Erniedrigung Frankreichs</li>
+                </ul>
+            </div>
+
+            <div class="history-card">
+                <h2>Reichsgründung</h2>
+                <div class="year">18. Januar 1871</div>
+                <ul>
+                    <li>Wilhelm I. wird Deutscher Kaiser</li>
+                    <li>Gründung des Deutschen Kaiserreichs</li>
+                    <li>Einheit unter preußischer Dominanz</li>
+                </ul>
+            </div>
+
         </div>
-
-        <div class="history-card">
-            <h2>Wartburgfest</h2>
-            <div class="year">1817</div>
-            <ul>
-                <li>Versammlung von ca. 500 Studenten</li>
-                <li>Protest für Einheit & Freiheit</li>
-                <li>Symbolische Bücherverbrennung</li>
-            </ul>
-        </div>
-
-        <div class="history-card">
-            <h2>Hambacher Fest</h2>
-            <div class="year">1832</div>
-            <ul>
-                <li>Rund 30.000 Teilnehmer fordern Reformen</li>
-                <li>Einheit, Freiheit und Volkssouveränität</li>
-                <li>Schwarz-Rot-Gold als Symbol verwendet</li>
-            </ul>
-        </div>
-
-        <!-- Weitere Karten analog ergänzt -->
-    </div>
-</main>
-
-
+    </main>
 
     <footer>
         <div class="footer-column">

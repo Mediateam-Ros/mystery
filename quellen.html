@@ -1,16 +1,63 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Quellen – Historische Begriffe</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #003366;
+      /* Dunkles Blau */
+      --accent: #ffc107;
+      /* Gelb/Gold */
+      --background: #ffffff;
+      --text: #111111;
+      --muted: #444;
+      --footer-bg: #f0f0f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
-      margin: 2em;
-      background-color: #f7f9fc;
-      color: #222;
+      background-color: var(--background);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 1.5em 2em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75em;
+    }
+
+    .logo img {
+      height: 40px;
+      border-radius: 50%;
+      background: white;
+    }
+
+    .logo span {
+      font-size: 1.4em;
+      font-weight: 600;
     }
 
     h1 {
@@ -24,7 +71,7 @@
       background: #fff;
       padding: 1em 1.5em;
       border-radius: 8px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     }
 
     h2 {
@@ -45,73 +92,133 @@
     }
 
     footer {
-      text-align: center;
-      margin-top: 3em;
-      font-size: 0.9em;
+      background-color: var(--footer-bg);
+      padding: 2em 1em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2em;
+      font-size: 0.95em;
+      border-top: 4px solid var(--primary);
     }
 
-    footer a {
-      color: #003366;
-      font-weight: 600;
+    .footer-column {
+      min-width: 180px;
+    }
+
+    .footer-column h3 {
+      font-size: 1.05em;
+      margin-bottom: 0.5em;
+      color: var(--primary);
+    }
+
+    .footer-column a {
+      display: block;
+      color: var(--text);
+      text-decoration: none;
+      margin: 0.3em 0;
+    }
+
+    .footer-column a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      .iframe-wrapper {
+        padding-top: 100%;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .footer-column {
+        width: 100%;
+      }
     }
   </style>
 </head>
+
 <body>
+
+  <header>
+    <div class="logo">
+      <img src="https://anthony-kuehl.de/assets/img/logo.png" alt="Logo" />
+      <span>Anthony Kühl</span>
+    </div>
+  </header>
 
   <h1>Quellenverzeichnis</h1>
 
   <section>
     <h2>Internetquellen (geordnet nach Thema)</h2>
     <ul>
-      <li><strong>Wiener Kongress:</strong>  
-        <a href="https://de.wikipedia.org/wiki/Wiener_Kongress" target="_blank">Wikipedia</a>, 
-        <a href="https://www.bpb.de/kurz-knapp/hintergrund-aktuell/211849/200-jahre-wiener-kongress" target="_blank">bpb.de</a>
+      <li><strong>Wiener Kongress:</strong>
+        <a href="https://de.wikipedia.org/wiki/Wiener_Kongress" target="_blank">Wikipedia</a>,
+        <a href="https://www.bpb.de/kurz-knapp/hintergrund-aktuell/211849/200-jahre-wiener-kongress"
+          target="_blank">bpb.de</a>
       </li>
-      <li><strong>Deutscher Bund:</strong>  
-        <a href="https://de.wikipedia.org/wiki/Deutscher_Bund" target="_blank">Wikipedia</a>, 
-        <a href="https://www.planet-wissen.de/geschichte/deutsche_geschichte/deutscher_bund/index.html" target="_blank">Planet Wissen</a>
+      <li><strong>Deutscher Bund:</strong>
+        <a href="https://de.wikipedia.org/wiki/Deutscher_Bund" target="_blank">Wikipedia</a>,
+        <a href="https://www.planet-wissen.de/geschichte/deutsche_geschichte/deutscher_bund/index.html"
+          target="_blank">Planet Wissen</a>
       </li>
-      <li><strong>Wartburgfest (1817):</strong>  
+      <li><strong>Wartburgfest (1817):</strong>
         <a href="https://de.wikipedia.org/wiki/Wartburgfest_(1817)" target="_blank">Wikipedia</a>
       </li>
-      <li><strong>Karlbader Beschlüsse:</strong>  
+      <li><strong>Karlbader Beschlüsse:</strong>
         <a href="https://de.wikipedia.org/wiki/Karlsbader_Beschl%C3%BCsse" target="_blank">Wikipedia</a>
       </li>
-      <li><strong>Hambacher Fest:</strong>  
+      <li><strong>Hambacher Fest:</strong>
         <a href="https://de.wikipedia.org/wiki/Hambacher_Fest" target="_blank">Wikipedia</a>
       </li>
-      <li><strong>Märzrevolution 1848:</strong>  
-        <a href="https://www.bpb.de/themen/deutschlandarchiv/301280/die-maerzrevolution-1848-in-deutschland/" target="_blank">bpb.de</a>, 
+      <li><strong>Märzrevolution 1848:</strong>
+        <a href="https://www.bpb.de/themen/deutschlandarchiv/301280/die-maerzrevolution-1848-in-deutschland/"
+          target="_blank">bpb.de</a>,
         <a href="https://de.wikipedia.org/wiki/M%C3%A4rzrevolution" target="_blank">Wikipedia</a>
       </li>
-      <li><strong>Frankfurter Nationalversammlung:</strong>  
-        <a href="https://www.dhm.de/lemo/kapitel/vormaerz-und-revolution/1848/frankfurter-nationalversammlung.html" target="_blank">dhm.de</a>, 
+      <li><strong>Frankfurter Nationalversammlung:</strong>
+        <a href="https://www.dhm.de/lemo/kapitel/vormaerz-und-revolution/1848/frankfurter-nationalversammlung.html"
+          target="_blank">dhm.de</a>,
         <a href="https://de.wikipedia.org/wiki/Frankfurter_Nationalversammlung" target="_blank">Wikipedia</a>
       </li>
-      <li><strong>Paulskirchenverfassung:</strong>  
+      <li><strong>Paulskirchenverfassung:</strong>
         <a href="https://de.wikipedia.org/wiki/Paulskirchenverfassung" target="_blank">Wikipedia</a>
       </li>
-      <li><strong>Pressefreiheit & Zensur:</strong>  
+      <li><strong>Pressefreiheit & Zensur:</strong>
         <a href="https://www.bpb.de/shop/zeitschriften/apuz/30338/zensur-und-pressefreiheit/" target="_blank">bpb.de</a>
       </li>
-      <li><strong>Bismarck & Reichsgründung:</strong>  
-        <a href="https://www.dhm.de/lemo/biografie/otto-von-bismarck.html" target="_blank">dhm.de</a>, 
+      <li><strong>Bismarck & Reichsgründung:</strong>
+        <a href="https://www.dhm.de/lemo/biografie/otto-von-bismarck.html" target="_blank">dhm.de</a>,
         <a href="https://de.wikipedia.org/wiki/Otto_von_Bismarck" target="_blank">Wikipedia</a>
       </li>
-      <li><strong>Deutsch-Französischer Krieg:</strong>  
+      <li><strong>Deutsch-Französischer Krieg:</strong>
         <a href="https://de.wikipedia.org/wiki/Deutsch-Franz%C3%B6sischer_Krieg" target="_blank">Wikipedia</a>
       </li>
-      <li><strong>Reichsgründung:</strong>  
+      <li><strong>Reichsgründung:</strong>
         <a href="https://de.wikipedia.org/wiki/Deutsche_Reichsgr%C3%BCndung" target="_blank">Wikipedia</a>
       </li>
-      <li><strong>Schwarz-Rot-Gold (Farben):</strong>  
-        <a href="https://www.bundestag.de/resource/blob/189012/e019dbe42ac60aab09dbb4e5c0dbd8d5/flagge-data.pdf" target="_blank">bundestag.de (PDF)</a>, 
+      <li><strong>Schwarz-Rot-Gold (Farben):</strong>
+        <a href="https://www.bundestag.de/resource/blob/189012/e019dbe42ac60aab09dbb4e5c0dbd8d5/flagge-data.pdf"
+          target="_blank">bundestag.de (PDF)</a>,
         <a href="https://de.wikipedia.org/wiki/Schwarz-Rot-Gold" target="_blank">Wikipedia</a>
       </li>
-      <li><strong>Weberaufstand:</strong>  
+      <li><strong>Weberaufstand:</strong>
         <a href="https://de.wikipedia.org/wiki/Schlesischer_Webaufstand" target="_blank">Wikipedia</a>
       </li>
-      <li><strong>Soziale Frage:</strong>  
+      <li><strong>Soziale Frage:</strong>
         <a href="https://de.wikipedia.org/wiki/Soziale_Frage" target="_blank">Wikipedia</a>
       </li>
     </ul>
